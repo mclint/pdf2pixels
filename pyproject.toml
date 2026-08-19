@@ -10,7 +10,22 @@ readme = "README.md"
 requires-python = ">=3.12"
 license = "Apache-2.0"
 license-files = ["LICENSE"]
+keywords = ["pdf", "pdf-to-image", "pdfium", "poppler", "png", "jpeg"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Typing :: Typed",
+]
 dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/mclint/pdf2pixels"
+Repository = "https://github.com/mclint/pdf2pixels"
+Issues = "https://github.com/mclint/pdf2pixels/issues"
 
 [project.optional-dependencies]
 pdfium = [

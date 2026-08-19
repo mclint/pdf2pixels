@@ -46,8 +46,10 @@ selected = list(convert("document.pdf", pages=[3, 1, 3]))
 ```
 
 For an interactive walkthrough, open the
-[quickstart notebook](examples/quickstart.ipynb), which renders and displays the
-included [sample PDF](examples/sample.pdf). Install its dependencies with
+[quickstart notebook](https://github.com/mclint/pdf2pixels/blob/main/examples/quickstart.ipynb),
+which renders and displays the included
+[sample PDF](https://github.com/mclint/pdf2pixels/blob/main/examples/sample.pdf).
+Install its dependencies with
 `python -m pip install -e ".[pdfium,examples]"`.
 
 The options are:
