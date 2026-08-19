@@ -24,6 +24,7 @@ dev = [
     "build",
     "hatchling",
     "mypy",
+    "pip-audit",
     "pytest",
     "pytest-cov",
     "ruff",

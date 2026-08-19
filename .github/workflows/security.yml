@@ -1,0 +1,56 @@
+name: Security
+
+on:
+  pull_request:
+    paths:
+      - "pyproject.toml"
+      - "environment.yml"
+      - "**/requirements*.txt"
+      - "**/*.lock"
+      - ".github/dependabot.yml"
+      - ".github/workflows/security.yml"
+  push:
+    branches:
+      - main
+    paths:
+      - "pyproject.toml"
+      - "environment.yml"
+      - "**/requirements*.txt"
+      - "**/*.lock"
+      - ".github/dependabot.yml"
+      - ".github/workflows/security.yml"
+  schedule:
+    - cron: "23 9 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  dependency-review:
+    name: Dependency review
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - uses: actions/dependency-review-action@2031cfc080254a8a887f58cffee85186f0e49e48 # v4.9.0
+        with:
+          fail-on-severity: moderate
+
+  dependency-audit:
+    name: Python dependency audit
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install project and audit tooling
+        run: python -m pip install --editable ".[pdfium,dev,examples]"
+
+      - name: Audit installed Python dependencies
+        run: python -m pip_audit --local --skip-editable
