@@ -7,8 +7,9 @@ name = "pdf2pixels"
 version = "0.1.0"
 description = "Stream PDF pages as images through interchangeable rendering backends."
 readme = "README.md"
-requires-python = ">=3.10"
-license = { file = "LICENSE" }
+requires-python = ">=3.12"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
 dependencies = []
 
 [project.optional-dependencies]
@@ -28,15 +29,14 @@ addopts = "-ra"
 testpaths = ["tests"]
 
 [tool.ruff]
-target-version = "py310"
+target-version = "py312"
 line-length = 88
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "UP"]
 
 [tool.mypy]
-python_version = "3.10"
+python_version = "3.12"
 mypy_path = "src"
 packages = ["pdf2pixels"]
 strict = true
-

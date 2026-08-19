@@ -1,0 +1,9 @@
+name: pdf2pixels-dev
+
+channels:
+  - conda-forge
+
+dependencies:
+  - python=3.12
+  - poppler
+  - pip
