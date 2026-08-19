@@ -17,6 +17,9 @@ pdfium = [
     "Pillow>=10.1",
     "pypdfium2>=5.0",
 ]
+examples = [
+    "jupyterlab>=4",
+]
 dev = [
     "build",
     "hatchling",

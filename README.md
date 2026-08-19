@@ -45,6 +45,11 @@ first_page = next(convert(pdf_bytes, pages=[1], format="jpeg", dpi=300))
 selected = list(convert("document.pdf", pages=[3, 1, 3]))
 ```
 
+For an interactive walkthrough, open the
+[quickstart notebook](examples/quickstart.ipynb), which renders and displays the
+included [sample PDF](examples/sample.pdf). Install its dependencies with
+`python -m pip install -e ".[pdfium,examples]"`.
+
 The options are:
 
 - `backend`: `"auto"` (PDFium, then Poppler), `"pdfium"`, or `"poppler"`.
@@ -84,9 +89,9 @@ conda env create --file environment.yml
 conda activate pdf2pixels-dev
 ```
 
-The environment installs the project editable with the PDFium and development
-extras. Build distributions with `python -m build`, or clean generated build
-artifacts with `python -m hatchling build --clean-only`.
+The environment installs the project editable with the PDFium, development,
+and example extras. Build distributions with `python -m build`, or clean
+generated build artifacts with `python -m hatchling build --clean-only`.
 
 ## License
 

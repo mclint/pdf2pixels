@@ -8,4 +8,4 @@ dependencies:
   - poppler
   - pip
   - pip:
-      - -e .[pdfium,dev]
+      - -e .[pdfium,dev,examples]

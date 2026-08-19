@@ -1,0 +1,49 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R 5 0 R] /Count 2 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 7 0 R >> >> /Contents 4 0 R >>
+endobj
+4 0 obj
+<< /Length 199 >>
+stream
+q 0.92 0.95 1 rg 0 0 612 792 re f Q
+q 0.15 0.35 0.75 rg 54 620 504 100 re f Q
+BT /F1 30 Tf 72 670 Td (pdf2pixels sample - page 1) Tj ET
+BT /F1 16 Tf 72 580 Td (Portrait page: 612 x 792 points) Tj ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 792 612] /Resources << /Font << /F1 7 0 R >> >> /Contents 6 0 R >>
+endobj
+6 0 obj
+<< /Length 199 >>
+stream
+q 1 0.96 0.9 rg 0 0 792 612 re f Q
+q 0.85 0.35 0.12 rg 60 410 672 100 re f Q
+BT /F1 30 Tf 82 460 Td (pdf2pixels sample - page 2) Tj ET
+BT /F1 16 Tf 82 370 Td (Landscape page: 792 x 612 points) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000121 00000 n 
+0000000247 00000 n 
+0000000496 00000 n 
+0000000622 00000 n 
+0000000871 00000 n 
+trailer
+<< /Size 8 /Root 1 0 R >>
+startxref
+941
+%%EOF
