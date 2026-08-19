@@ -13,8 +13,13 @@ license-files = ["LICENSE"]
 dependencies = []
 
 [project.optional-dependencies]
-pdfium = ["pypdfium2"]
+pdfium = [
+    "Pillow>=10.1",
+    "pypdfium2>=5.0",
+]
 dev = [
+    "build",
+    "hatchling",
     "mypy",
     "pytest",
     "pytest-cov",

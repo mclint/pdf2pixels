@@ -54,6 +54,34 @@ jobs:
       - name: Type check
         run: mypy
 
+  minimum-pdfium:
+    name: Minimum PDFium
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install Poppler
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes poppler-utils
+
+      - name: Install minimum PDFium
+        run: python -m pip install "pypdfium2==5.0.0" "Pillow>=10.1"
+
+      - name: Install project
+        run: python -m pip install --editable ".[pdfium,dev]"
+
+      - name: Verify PDFium version
+        run: python -c "import pypdfium2; assert pypdfium2.PYPDFIUM_INFO.api_tag == (5, 0, 0)"
+
+      - name: Run tests
+        run: pytest
+
   build:
     name: Build distributions
     runs-on: ubuntu-latest
